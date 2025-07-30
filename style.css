@@ -11,6 +11,24 @@
     font-family: 'Poppins',sans-serif;
 }
 
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh; /* not height: 100% */
+  overflow-x: hidden; /* prevents horizontal scroll */
+  font-family: 'Poppins', sans-serif;
+}
+
 :root {
   --bg-color: #fffbe6; /* soft yellow background */
   --second-bd-color: #ffe17d; /* light golden yellow */
