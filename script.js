@@ -2,7 +2,15 @@ let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
 menuIcon.onclick = () => {
-    menuIcon.classList.toggle('fa-xmark');
+  if (menuIcon.classList.contains('fa-bars')) {
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-xmark');
+    } else {
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+    }
+
+    // Toggle navbar
     navbar.classList.toggle('active');
 };
 
@@ -29,12 +37,13 @@ window.onscroll = () => {
 
     // Remove menu while scrolling
     menuIcon.classList.remove('fa-xmark');
-    navbar.classList.remove('active');
+menuIcon.classList.add('fa-bars');
+navbar.classList.remove('active');
 };
 
 // Scroll reveal
 ScrollReveal({
-    reset: true,
+    reset: false,
     distance: '80px',
     duration: 2000,
 });
